@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Footer from './Footer'; 
 import  './Signup.css';  
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'; 
@@ -13,7 +12,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://mood-backend-h9i4.onrender.com/api/users/signup', {
+      const response = await axios.post('http://localhost:8080/api/users/signup', {
         name,
         email,
         password,
@@ -70,7 +69,6 @@ const Signup = () => {
         </form>
       </div>
     </div>
-    <Footer /> 
   </>
   );
 };

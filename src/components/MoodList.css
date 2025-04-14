@@ -1,0 +1,92 @@
+.moodList {
+    font-family: 'Comfortaa', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.moodList h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2f2e58;
+    margin-bottom: 20px;
+}
+
+.moodList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.moodList li {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.moodList li h3 {
+    font-size: 1.8em;
+    color: #2f2e58;
+}
+
+.moodList li p {
+    font-size: 1.1em;
+    color: #4c4a81;
+}
+
+.moodList li ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.moodList li ul li {
+    font-size: 1em;
+    color: #3b3a75;
+}
+
+.moodList button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2f2e58;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.moodList button:hover {
+    background-color: #3b3a75;
+}
+
+.moodList p {
+    font-size: 1.2em;
+    color: #6c6b7d;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .moodList {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .moodList h2 {
+        font-size: 2.2em;
+    }
+
+    .moodList li {
+        padding: 15px;
+    }
+
+    .moodList button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}

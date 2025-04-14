@@ -1,3 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Background and General Styling */
+body {
+  background: linear-gradient(to bottom, #6f6da6, rgb(249, 250, 250));
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-y: hidden; 
+}
+
+.inputBox{
+  padding-top: 120px;
+}
+
+#sub{
+  text-align: center;
+}
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -8,28 +34,33 @@
   padding: 20px;
   color: white;
 }
-#sub{
-  margin-top: 50px;
-}
+
 textarea {
   width: 80%;
   height: 50px;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 50px 0;
   font-size: 16px;
   border-radius: 55px;
-  border: 1px solid #6b3d3d;
+  border: 2px solid #6f6da6;
+  scrollbar-width: none;
+  padding: 12px 20px ;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  resize: none;
+  display: block;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 16px;
   border: none;
   border-radius: 25px;
   background-color: white;
   color: #6f6da6;
   cursor: pointer;
-  border: 3px solid #6f6da6;
+  border: 2px solid #6f6da6;
+  height: 50px;
+  margin-top: 50px;
 }
 
 button:disabled {
@@ -43,7 +74,7 @@ button:disabled {
   padding: 20px;
   background: #f0f0f0;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -66,7 +97,179 @@ button:disabled {
   font-weight: bold;
 }
 
-.bg{
+#bg{
   background: linear-gradient(to bottom, #6f6da6, rgb(249, 250, 250));
   background-attachment: fixed;
+  margin-top: 0rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 30px 30px 30px;
+} 
+
+
+.inputArea{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20px;
+}
+
+.bg h2 {
+  position: sticky;
+} 
+
+.result-container {
+  flex-grow: 1;
+  overflow-y: auto; 
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  margin: 0 10px 0 20px; 
+  color: #282c34;
+ 
+}
+
+.result-container h2 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Suggestions box scrolling after 3+ suggestions */
+.suggestions {
+  max-height: 250px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-right: 5px;
+}
+
+
+@media (max-width: 760px) {
+  .bg h2{
+    font-size: 20px;
+  }
+
+  #sub{
+    font-size: 35px;
+  }
+
+  #btn{
+    font-size: 13px;
+    padding-top: 8px;
+    margin: 40px 10px;
+  }
+
+  textarea {
+    font-size: 13px;
+    padding: 12px 20px;
+    margin: 40px 0;
+    width: 100%;
+  }
+
+
+.inputBox{
+  padding-right: 10px;
+}
+  
+#bg{
+  padding: 0;
+} 
+
+.result-container{
+  margin: 0 0;
+  font-size: 20px;
+  width: 100%;
+}
+
+.suggestions{
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  max-height: 350px; 
+  }
+}
+
+
+@media (max-width: 400px) {
+  .bg h2{
+    font-size: 20px;
+  }
+
+  #sub{
+    font-size: 25px;
+  }
+
+  #btn{
+    font-size: 13px;
+    padding-top: 8px;
+    margin: 25px 10px;
+  }
+
+  textarea {
+    font-size: 13px;
+    padding: 12px 20px;
+    margin: 25px 0;
+    width: 100%;
+  }
+
+
+.inputBox{
+  padding-right: 10px;
+}
+  
+#bg{
+  padding: 0;
+} 
+
+.result-container{
+  margin: 0 0;
+  font-size: 15px;
+  width: 100%;
+}
+
+.suggestions{
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  max-height: 200px; 
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .bg h2{
+    font-size: 20px;
+  }
+
+  #sub{
+    font-size: 22px;
+  }
+
+  #btn{
+    font-size: 13px;
+    padding-top: 8px;
+    margin: 25px 10px;
+  }
+
+  textarea {
+    font-size: 13px;
+    padding: 12px 20px;
+    margin: 25px 0;
+    width: 100%;
+  }
+
+
+.inputBox{
+  padding-right: 10px;
+}
+
+.result-container{
+  margin: 0 0;
+  font-size: 10px;
+  width: 100%;
+}
+
+.suggestions{
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  max-height: 200px; 
+  }
 }

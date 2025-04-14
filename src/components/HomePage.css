@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
-
 .homepage {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    height: 75vh;
-
+    margin-top: 90px;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: transparent;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    z-index: 1;
-    position: sticky;
+    z-index: 10;
+    position: fixed;
     top: 0;
     width: 100%;
-    
+    height: 70px;
 }
 
 .logo {
@@ -37,15 +34,14 @@
 }
 
 .nav-buttons button {
-    /* margin: 0 10px; */
     padding: 10px 20px;
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    background-color: transparent ;
-    font-size: 20px;
     background-color: #2f2d5d;
-    box-shadow: none;
+    font-size: 18px;
+    border: none;
+    transition: 0.3s;
 }
 
 .nav-buttons button:hover {
@@ -54,50 +50,171 @@
 
 .main-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    padding: 0 5%;
 }
 
 .description {
     max-width: 500px;
+    text-align: left;
 }
 
 .description h2 {
-    font-size: 3.9em;
+    font-size: 3.5em;
     font-weight: lighter;
-    margin-bottom: 20px;
-    font-family: "Comfortaa";
-    color:#2f2e58
-
+    margin-bottom: 15px;
+    font-family: "Comfortaa", sans-serif;
+    color: #2f2e58;
 }
 
 .description p {
     font-size: 1.5em;
-    margin-bottom: 20px;
-    color:#4c4a81
+    margin-bottom: 15px;
+    color: #4c4a81;
 }
 
 .description button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #fafffb;
     color: rgb(3, 3, 3);
     border: none;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #f7f7f9, 0 0 10px #ededf0, 0 0 10px #f9f9fa, 0 0 10px #efeff3;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #f7f7f9;
     border: 2px solid #6f6da6;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#g{
+.description button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.gif {
     background: none;
     clip-path: circle(50%);
-    margin-top: 80px;
-    
+    max-width: 100%;
+    text-align: center;
 }
-
 
 .gif img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 2.8em;
+    }
+
+    .description p {
+        font-size: 1.3em;
+    }
+
+    .gif {
+        margin-top: 2rem;
+        width: 50%;
+    }
+} 
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-buttons button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .description h2 {
+        font-size: 2.4em;
+    }
+
+    .description p {
+        font-size: 1.2em;
+    }
+
+    .description button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .gif {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+        padding: 10px;
+    }
+
+    .description h2 {
+        font-size: 2em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+
+    .description button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 2rem;
+    }
+
+    .gif {
+        width: 90%;
+    }
+}
+
+/* Result Section */
+.result-container {
+    margin-top: 2rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .result-container h2 {
+        font-size: 1.5em;
+    }
 }

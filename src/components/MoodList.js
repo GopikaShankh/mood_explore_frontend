@@ -1,9 +1,11 @@
 import React from "react";
+import './App.css';
+import './MoodList.css'
 
 const MoodList = ({ moods, onDeleteMood }) => {
    
     return (
-        <div>
+        <div className="moodList">
             <h2>Mood List</h2>
             {moods.length === 0 ? (
                 <p>No moods to display</p>

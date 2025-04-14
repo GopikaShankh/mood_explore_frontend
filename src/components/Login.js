@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from './navbar'; 
-import Footer from './Footer';
 import './Signup.css'; 
 import './Login.css'; 
 import axios from 'axios';
@@ -15,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://mood-backend-h9i4.onrender.com/api/users/login', {
+      const response = await axios.post('http://localhost:8080/api/users/login', {
         email,
         password,
       });
@@ -56,7 +55,6 @@ const Login = () => {
         </form>
       </div>
     </div>
-    <Footer />
   </>
     
   );

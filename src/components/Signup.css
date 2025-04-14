@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 2rem;
+  height: 90vh;
+  padding: 1rem;
   gap: 2rem;
   background: linear-gradient(to bottom, #6f6da6, rgb(249, 250, 250));
   background-repeat: no-repeat;
@@ -14,14 +14,14 @@
 
 .signup-right h2, 
 .signup-right p {
-  text-align: center; /* Text ko horizontally center align karne ke liye */
+  text-align: center; 
 }
 
 .signup-right {
   flex: 1;
   max-width: 500px;
-  background: rgba(0, 0, 0, 0.2); /* More transparency */
-  backdrop-filter: blur(15px); /* Stronger blur effect */
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(15px); 
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -29,38 +29,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; 
 }
 
 .signup-right:hover {
-  background: rgba(0, 0, 0, 0.3); /* Slightly darker on hover */
-  backdrop-filter: blur(20px); /* Stronger blur on hover */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(20px); 
 }
 
 .signup-left {
   flex: 1;
-  max-width: 500px; /* Left container ki width bhi chhoti ki */
+  max-width: 500px; 
   padding: 2rem;
 }
 
 .signup-left h1 {
-  font-size: 3rem; /* Increased size for heading */
+  font-size: 3rem; 
   margin-bottom: 1.5rem;
 }
 
 .signup-left p {
-  font-size: 1.2rem; /* Increased size for paragraph */
+  font-size: 1.2rem; 
   margin-bottom: 2.5rem;
 }
 
 .signup-right h2 {
-  font-size: 2.2rem; /* Increased size for heading in the right section */
+  font-size: 2.2rem; 
   margin-bottom: 1.5rem;
   color: #fff;
 }
 
 .signup-right p {
-  font-size: 1.2rem; /* Increased size for paragraph in the right section */
+  font-size: 1.2rem; 
   text-align: center;
 }
 
@@ -82,13 +82,13 @@
   margin: 10px 0;
   border: none;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2); /* Light transparent white */
-  color: #000; /* Text color inside input */
+  background: rgba(255, 255, 255, 0.2); 
+  color: #000; 
   font-size: 1rem;
 }
 
 .signup-form input::placeholder {
-  color: #000; /* Placeholder text color changed to black */
+  color: #000; 
 }
 
 .signup-form input:focus {
@@ -98,7 +98,7 @@
 
 .signup-form input,
 .signup-button {
-  width: calc(100% - 20px); /* Same width with proper padding adjustment */
+  width: calc(100% - 20px); 
 }
 
 .signup-button {
@@ -107,7 +107,7 @@
   margin: 10px 0;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(135deg, #4e4ebd, #a5a7f7); /* Button gradient */
+  background: linear-gradient(135deg, #4e4ebd, #a5a7f7); 
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -116,7 +116,7 @@
 
 .signup-button:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #a5a7f7, #4e4ebd); /* Hover gradient reverse */
+  background: linear-gradient(135deg, #a5a7f7, #4e4ebd);
 }
 
 .testimonial {

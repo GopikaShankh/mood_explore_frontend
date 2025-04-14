@@ -14,16 +14,19 @@ const MoodForm = ({ onAddMood }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2 id="sub">Submit Your Mood</h2>
-      <textarea
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="How are you feeling?"
-        required
-      ></textarea>
-      <button type="submit">Add Mood</button>
-    </form>
+    <div className="inputBox">
+      <form onSubmit={handleSubmit}>
+        <h2 id="sub">Submit Your Mood</h2>
+        <div className="inputArea">
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="How are you feeling?"
+            required></textarea>
+          <button id="btn" type="submit">Add Mood</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

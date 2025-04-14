@@ -16,7 +16,7 @@ const History = () => {
         try {
             const decodedToken = jwtDecode(token);
             const userId = decodedToken.id;
-            const response = await axios.get(`https://mood-backend-h9i4.onrender.com/${userId}`, {
+            const response = await axios.get(`http://localhost:8080/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -41,7 +41,7 @@ const History = () => {
             const decodedToken = jwtDecode(token);
             const userId = decodedToken.id;
 
-            const response = await axios.delete(`https://mood-backend-h9i4.onrender.com/${userId}/${id}`, {
+            const response = await axios.delete(`http://localhost:8080/${userId}/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -67,9 +67,9 @@ const History = () => {
     return (
         <div className="bg">
             <Navbar />
-            <h1>Mood History</h1>
+            <h2 id="moodhistory">Mood History</h2>
             {moods.length > 0 ? (
-                <ul>
+                <ul id="list" className="contain">
                     {moods.map((mood) => (
                         <li key={mood._id}>
                             <h3>Mood: {mood.mood}</h3>

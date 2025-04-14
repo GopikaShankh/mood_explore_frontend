@@ -1,48 +1,41 @@
-.bg {
-    background-color: transparent;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
 
-#MH {
+.bg{
+    background: linear-gradient(to bottom, #6f6da6, rgb(249, 250, 250));
+    background-attachment: fixed;
+    margin-top: 0rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  } 
+  
+  
+h2 {
     text-align: center;
     color: #262558;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     font-size: 50px;
 }
-#HH{
-    color: #262558;
-    font-family: "Comfortaa";
-    font-size: 20px;
+
+#moodhistory{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6.5rem;
 }
+
+.contain {
+  position: absolute;
+  width: 100%;
+  height: 75%; 
+  overflow-y: scroll; 
+  margin-top: 130px;
+  padding: 20px;
+  scrollbar-width: none;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
-}
-h4{
-    font-size: 20px;
-}
-#one{
-    color: #262558;
-}
-#one1{
-    color: #262558;
-    font-size: 25px;
-}
-li {
-    background-color: transparent;
-    border: 1px solid #ddd;
-    border-radius:20px;
-    margin: 10px 0;
-    padding: 15px;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-    color:#262558
-}
-li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.15);
 }
 
 h3 {
@@ -55,7 +48,24 @@ p {
     color: #666;
 }
 
-button{
+li {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    color: #262558;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.15);
+}
+
+button {
     padding: 10px 20px;
     background-color: #fafffb;
     color: rgb(3, 3, 3);
@@ -63,10 +73,27 @@ button{
     border-radius: 20px;
     box-shadow: 0 0 10px #f7f7f9, 0 0 10px #ededf0, 0 0 10px #f9f9fa, 0 0 10px #efeff3;
     border: 2px solid #6f6da6;
+    cursor: pointer;
 }
- #D{
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+#MH {
+    text-align: center;
+    color: #262558;
+    font-family: "Comfortaa";
+    font-size: 50px;
+}
+
+#D {
     color: #262558;
     font-size: 15px;
     font-weight: bold;
-    
- }
+}
+

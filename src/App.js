@@ -7,8 +7,10 @@ import HomePage from "./components/HomePage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
+
 const App = () => {
     return (
+        <>
         <Router>
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -18,6 +20,7 @@ const App = () => {
                 <Route path="/history" element={<History />} />
             </Routes>
         </Router>
+        </>
     );
 };
 
