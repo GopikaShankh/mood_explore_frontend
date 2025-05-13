@@ -21,6 +21,7 @@ const History = () => {
                     Authorization: `Bearer ${token}`,
                 },
             });
+            console.log(response)
             setMoods(response.data);
         } catch (error) {
             if (error.response && error.response.status === 404) {
@@ -31,7 +32,6 @@ const History = () => {
         }
     };
     
-    // Delete a mood
     // Delete a mood
     const deleteMood = async (id) => {
         const token = localStorage.getItem('token');

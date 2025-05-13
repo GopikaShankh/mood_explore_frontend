@@ -7,7 +7,7 @@ import Navbar from "./navbar";
 import { jwtDecode } from 'jwt-decode'; 
 const Dashboard = () => {
     const [moods, setMoods] = useState([]);
-
+    const [latestMood, setLatestMood] = useState(JSON.parse(localStorage.getItem("latestMood")) || null);
     // Fetch moods from the backend
     const fetchMoods = async () => {
         const token = localStorage.getItem('token');
@@ -31,6 +31,12 @@ const Dashboard = () => {
     useEffect(() => {
         fetchMoods();
     }, []);
+    useEffect(() => {
+        if (moods.length > 0) {
+            localStorage.setItem("latestMood", JSON.stringify(moods[0]));
+        }
+        setLatestMood(moods[0])
+    }, [moods])
 
     // Add a new mood
     const addMood = async (mood) => {
@@ -51,9 +57,9 @@ const Dashboard = () => {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
-              });
-            setMoods([...moods, response.data]);
+            });
             console.log('Mood added:', response.data);
+            setMoods([...moods, response.data]);
             fetchMoods();
         } catch (error) {
             console.error("Error adding mood:", error);
@@ -73,7 +79,10 @@ const Dashboard = () => {
 
 
     // Get the latest mood
-    const latestMood = moods.length > 0 ? moods[0] : null;
+    // if (moods.length > 0) {
+    //     localStorage.setItem("latestMood", JSON.stringify(moods[0]));
+    // }
+    // let latestMood = JSON.parse(localStorage.getItem("latestMood")) || null;
 
     return (
         <div id="bg">
